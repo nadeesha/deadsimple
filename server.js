@@ -62,7 +62,7 @@ function serve (req, res) {
         }
 
         res.writeHead(code, headers);
-        res.end(html, 'utf8');
+        res.end(html, 'ascii');
     });
 }
 
