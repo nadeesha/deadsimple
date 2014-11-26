@@ -9,7 +9,7 @@ var header, footer;
 function setup(done) {
 	console.info('setting up your server');
 
-    reader.read('./partials/header.html', function (err, data) {
+    reader.read('./content/partials/header.html', function (err, data) {
         if(err) {
             console.error('error reading header.html');
         }
@@ -18,7 +18,7 @@ function setup(done) {
         done();
     });
 
-    reader.read('./partials/footer.html', function (err, data) {
+    reader.read('./content/partials/footer.html', function (err, data) {
         if(err) {
             console.error('error reading footer.html');
         }
@@ -69,7 +69,7 @@ function serve (req, res) {
 setup(function () {
 	if (header && footer) {
 		console.info('set up done! now serving files');
-		http.createServer(serve).listen(9615);
+		http.createServer(serve).listen(process.env.PORT || 8888);
 	}
 });
 
