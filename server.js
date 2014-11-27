@@ -2,7 +2,8 @@
 
 var http = require('http'),
     reader = require('./lib/reader'),
-    urlutil = require('./lib/urlutil');
+    parser = require('./lib/simpleparser'),
+    PORT = process.env.PORT || 8888;
 
 var header, footer;
 
@@ -28,35 +29,18 @@ function setup(done) {
     });
 }
 
-function parse(url, done) {
-    url = urlutil.rinse(url);
-    var filename = urlutil.mapfile(url);
-
-    console.info('mapped: %s --> %s', url, filename);
-
-    reader.read(filename, function (err, page) {
-        if(err) {
-            console.error(err);
-
-        	if (err.code === 'ENOENT') {
-        		return done(null, 404);
-        	} else {
-        		return done(err, 500);
-        	}
-        }
-
-        var html = header + '\r\n' + page + '\r\n' + footer;
-
-        done(null, 200, html);
-    });
-}
-
 function serve (req, res) {
     var headers = {
         'Content-Type': 'text/html'
     };
 
-    parse(req.url, function (err, code, html) {
+    var options = {
+        url: req.url,
+        header: header,
+        footer: footer
+    };
+
+    parser.parse(options, function (err, code, html) {
         if(err) {
             console.error(err);
         }
@@ -68,8 +52,8 @@ function serve (req, res) {
 
 setup(function () {
 	if (header && footer) {
-		console.info('set up done! now serving files');
-		http.createServer(serve).listen(process.env.PORT || 8888);
+		console.info('set up done! now serving files on ' + PORT);
+		http.createServer(serve).listen(PORT);
 	}
 });
 
