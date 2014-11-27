@@ -1,0 +1,6 @@
+{
+    "name": "Deadsimple",
+    "description": "A dead simple static site server with markdown and bootstrap goodness.",
+    "repository": "https://github.com/ncthis/deadsimple",
+    "keywords": ["static", "bootstrap", "markdown"]
+}
