@@ -38,7 +38,7 @@ You can find the `header.html` and `footer.html` inside `content\partials`.
 
 ## Styling
 
-You can use any theme from the `content\resources\themes` directory. Or put your own there. Just change the theme attribute in the following line (in `header.html`) to the name (minus the extension) of `.min.css` file. 
+You can use any theme from [Bootswatch][http://bootswatch.com]. Just change the theme attribute in the following line (in `header.html`) to the name of the theme.
 
 
 ```html
