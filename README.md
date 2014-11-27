@@ -45,6 +45,14 @@ You can use any theme from the `content\resources\themes` directory. Or put your
 <xmp theme="slate" style="display:none;">
 ```
 
+# Quirks/Limitations
+
+* All markdown is parsed on the client. 
+** This means some search engines may not see the rendered page. But since search engines like google can already parse pages rendered with javascript correctly, this might not be a huge deal.
+** Performance degradations may be experienced by slower clients.
+* All pages are read at runtime and not cached. This is something that should be fixed soon.
+* The static server can not serve anything other than .md files. That's why we're using a cdn to serve js and css. (And you know, it should not. It's simple and elegant as it is
+
 # Contributions
 
 There's a lot of room for improvements here. (See the todo: tags) Any contributions are highly appreciated. In search for minimalism and simplicity, I've not used any packages except for the node core modules. But it doesn't need to be that way. Being lightweight is the only requirement.
