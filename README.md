@@ -36,6 +36,15 @@ Write any content that you want in markdown and add it in the `content` director
 
 You can find the `header.html` and `footer.html` inside `content\partials`.
 
+## Styling
+
+You can use any theme from the `content\resources\themes` directory. Or put your own there. Just change the theme attribute in the following line (in `header.html`) to the name (minus the extension) of `.min.css` file. 
+
+
+```html
+<xmp theme="slate" style="display:none;">
+```
+
 # Contributions
 
 There's a lot of room for improvements here. (See the todo: tags) Any contributions are highly appreciated. In search for minimalism and simplicity, I've not used any packages except for the node core modules. But it doesn't need to be that way. Being lightweight is the only requirement.
