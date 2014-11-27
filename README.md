@@ -1,10 +1,10 @@
 # Deadsimple
 
-A dead simple static site ~~generator~~ server that converts your markdown to bootstrap based html.
+A dead simple static site ~~generator~~ server that converts your markdown to bootstrap based html. [Demo](http://personal-site-nc.herokuapp.com)
 
 # Why?
 
-When I want a static site hosted, I want it to be *dead simple*. Ideally, I'd write markdown files, put them in a bunch of directories, link them together, and I'd have a static site that would automatically style them and serve. No configurations, no commands to parse/compile/generate/publish. 
+When I want a static site hosted, I want it to be *dead simple*. Ideally, I'd write a bunch of markdown files, put them in a bunch of directories, link them together, and I'd have a static site that would automatically style them and serve. No configurations, no commands to parse/compile/generate/publish. 
 
 # How does it work?
 
