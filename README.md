@@ -1,6 +1,6 @@
 # Deadsimple
 
-A dead simple static site ~~generator~~ server that converts your markdown to bootstrap based html. [Demo](http://personal-site-nc.herokuapp.com)
+A dead simple static site ~~generator~~ server that converts your markdown to bootstrap based html. [Demo](http://nadeesha.herokuapp.com)
 
 # Why?
 
